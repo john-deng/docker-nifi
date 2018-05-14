@@ -1,0 +1,6 @@
+content_repository/
+database_repository/
+flowfile_repository/
+provenance_repository/
+logs/
+data/
