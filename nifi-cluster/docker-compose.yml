@@ -4,6 +4,7 @@ services:
   nifi:
     image: apache/nifi
     privileged: true
+    restart: always
     ports:
       - "9090:9090"
     volumes:
@@ -16,7 +17,7 @@ services:
     - "./provenance_repository:/opt/nifi/nifi-1.6.0/provenance_repository"
     environment:
       IS_CLUSTER_NODE: 1
-      ZK_NODES_LIST: 172.16.5.90
+      ZK_NODES_LIST: localhost
       ELECTION_TIME: 1 min
       NIFI_WEB_HTTP_PORT: 9090
 
